@@ -38,6 +38,7 @@ build/
 
 # Typescript v1 declaration files
 typings/
+notes.txt
 
 # npm config file
 .npmrc

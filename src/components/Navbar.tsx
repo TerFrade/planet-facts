@@ -1,21 +1,21 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-const Navbar = () => {
+type Props = {
+  planetNames: string[]
+}
+
+const Navbar: React.FC<Props> = ({ planetNames }: Props) => {
+  const renderLinks = () => {
+    return planetNames.map((name, i) => (
+      <li key={i}>
+        <Link to={`/planet/${name.toLowerCase()}`}>{name}</Link>
+      </li>
+    ))
+  }
   return (
     <div>
-      <ul>
-        <li>
-          <Link to="/planet/xd">Home</Link>
-        </li>
-        <li>
-          <Link to="/about">About</Link>
-        </li>
-        <li>
-          <Link to="/dashboard">Dashboard</Link>
-        </li>
-      </ul>
-
+      <ul>{renderLinks()}</ul>
       <hr />
     </div>
   )
