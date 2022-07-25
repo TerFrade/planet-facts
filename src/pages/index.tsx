@@ -1,7 +1,7 @@
 import React from "react"
 
 import Navbar from "../components/Navbar"
-import RouteOutlet from "./routerOutlet"
+import RouteOutlet from "../components/RouteOutlet"
 
 const App = () => {
   return (
