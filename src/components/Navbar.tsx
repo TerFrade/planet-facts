@@ -1,10 +1,8 @@
 import React from "react"
 
-import { Routes, Route, Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 
 const Navbar = () => {
-  // eslint-disable-next-line no-console
-  console.log("hello from nav")
   return (
     <div>
       <ul>
@@ -20,14 +18,6 @@ const Navbar = () => {
       </ul>
 
       <hr />
-
-      <Routes>
-        <Route path="/" element={<div>Hello Home</div>} />
-
-        <Route path="/about" element={<div>Hello About</div>} />
-
-        <Route path="/dashboard" element={<div>Hello Dashboard</div>} />
-      </Routes>
     </div>
   )
 }
