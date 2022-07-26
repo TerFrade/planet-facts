@@ -1,45 +1,16 @@
 import React from "react"
-import { useParams } from "react-router-dom"
+
+import { useFindObject } from "../hooks"
+import { Planet as PlanetModel } from "../models"
 
 export type Props = {
-  planets:
-    | {
-        name: string
-        overview: {
-          content: string
-          source: string
-        }
-        structure: {
-          content: string
-          source: string
-        }
-        geology: {
-          content: string
-          source: string
-        }
-        rotation: string
-        revolution: string
-        radius: string
-        temperature: string
-        images: {
-          planet: string
-          internal: string
-          geology: string
-        }
-      }[]
+  planets: PlanetModel[]
 }
 
 const Planet: React.FC<Props> = ({ planets }: Props) => {
-  const { name } = useParams()
+  const planet = useFindObject("name", planets) as PlanetModel
 
-  const planet = planets.find((planet) => {
-    return planet.name.toLowerCase() == name
-  })
-
-  // eslint-disable-next-line no-console
-  console.log(planet)
-
-  return <div>{name}</div>
+  return <div>{planet.name}</div>
 }
 
 export default Planet
