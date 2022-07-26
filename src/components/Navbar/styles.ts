@@ -13,9 +13,7 @@ export const Container = styled.div`
   }
 `
 
-export const Title = styled.div`
-  text-transform: uppercase;
-`
+export const Title = styled.div``
 
 export const Nav = styled.div`
   display: flex;
@@ -28,7 +26,6 @@ export const Nav = styled.div`
     font-size: 1.25rem;
     font-weight: 600;
     text-decoration: none;
-    text-transform: uppercase;
     :hover {
       background-color: #6518ca;
     }
