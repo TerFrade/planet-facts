@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background-image: url("./assets/background-stars.svg");
+  background-color: #070724;
+  background-repeat: repeat;
+  color: #ffffff;
+  letter-spacing: 0.12rem;
   font-family: "Space Mono", monospace, "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
     "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9,4 +14,15 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  letter-spacing: 0.12rem;
+  color: #ffffff;
+}
+
+.main-content {
+  padding: 0rem 3.2rem;
+  margin-right: auto;
+  margin-left: auto;
 }
