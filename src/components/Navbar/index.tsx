@@ -10,7 +10,7 @@ type Props = {
 const Navbar: React.FC<Props> = ({ planetNames }: Props) => {
   const renderLinks = () => {
     return planetNames.map((name, i) => (
-      <Link key={i} to={`/planet/${name.toLowerCase()}`}>
+      <Link key={i} to={`/${name.toLowerCase()}`}>
         {name}
       </Link>
     ))

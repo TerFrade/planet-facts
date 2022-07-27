@@ -1,5 +1,4 @@
 {
-  "homepage":"https://terfrade.github.io/planet-facts/",
   "name": "name",
   "version": "0.1.0",
   "private": true,
@@ -18,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "serve": "npx serve -s build",
     "test": "react-scripts test",
@@ -50,7 +49,6 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.30.1",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "gh-pages": "^4.0.0",
     "prettier": "^2.7.1",
     "typescript": "^4.7.4"
   }
