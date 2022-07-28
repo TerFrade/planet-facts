@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom"
 
-import { Container, Title, Nav } from "../Navbar/styles"
+import { Container, Title, Menu } from "../Navbar/styles"
 
 type Props = {
   planetNames: string[]
@@ -18,7 +18,7 @@ const Navbar: React.FC<Props> = ({ planetNames }: Props) => {
   return (
     <Container>
       <Title>The Planets</Title>
-      <Nav>{renderLinks()}</Nav>
+      <Menu>{renderLinks()}</Menu>
     </Container>
   )
 }
