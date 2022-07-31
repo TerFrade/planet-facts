@@ -2,14 +2,15 @@ import React from "react"
 
 import Navbar from "../components/Navbar"
 import RouteOutlet from "../components/RouteOutlet"
+import { PlanetModel } from "../models"
 import planets from "../planet-data.json"
-import { getLinks } from "../utils"
+import { getPropValues } from "../utils"
 
 const App = () => {
-  const planetNames = getLinks("name", planets)
+  const planetData = getPropValues<PlanetModel>(["name", "images"], planets)
   return (
     <>
-      <Navbar planetNames={planetNames} />
+      <Navbar planetData={planetData} />
       <RouteOutlet planets={planets} />
     </>
   )

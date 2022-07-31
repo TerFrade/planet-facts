@@ -1,24 +1,29 @@
-import React from "react"
-import { Link } from "react-router-dom"
+import React, { useCallback, useState } from "react"
 
-import { Container, Title, Nav } from "../Navbar/styles"
+import { PlanetModel } from "../../models"
+import renderLinks, { Container, Title, Menu, MenuItems } from "./elements"
 
 type Props = {
-  planetNames: string[]
+  planetData: PlanetModel[]
 }
 
-const Navbar: React.FC<Props> = ({ planetNames }: Props) => {
-  const renderLinks = () => {
-    return planetNames.map((name, i) => (
-      <Link key={i} to={`/${name.toLowerCase()}`}>
-        {name}
-      </Link>
-    ))
-  }
+const Navbar: React.FC<Props> = ({ planetData }: Props) => {
+  const [isToggled, setIsToggled] = useState(false)
+
+  const handleTogle = useCallback(() => {
+    setIsToggled(!isToggled)
+  }, [isToggled])
+
   return (
     <Container>
       <Title>The Planets</Title>
-      <Nav>{renderLinks()}</Nav>
+      <Menu>
+        <label htmlFor="menu" onClick={handleTogle}>
+          &#8801;
+        </label>
+        <input type="checkbox" name="menu" id="menu" checked={isToggled} />
+        <MenuItems>{renderLinks(planetData, handleTogle)}</MenuItems>
+      </Menu>
     </Container>
   )
 }
