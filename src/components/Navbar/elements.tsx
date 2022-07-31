@@ -20,7 +20,7 @@ export default function renderLinks(
           media="(max-width: 996px)"
           srcSet={require(`../../assets/${planet.images.planet}`)}
         />
-        <img width="25px" />
+        <img width="30px" />
       </picture>
       {planet.name}
     </NavLink>
