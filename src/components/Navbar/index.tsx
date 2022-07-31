@@ -1,24 +1,17 @@
 import React from "react"
-import { Link } from "react-router-dom"
 
-import { Container, Title, Menu } from "../Navbar/styles"
+import { PlanetModel } from "../../models"
+import renderLinks, { Container, Title, MenuItems } from "./elements"
 
 type Props = {
-  planetNames: string[]
+  planetData: PlanetModel[]
 }
 
-const Navbar: React.FC<Props> = ({ planetNames }: Props) => {
-  const renderLinks = () => {
-    return planetNames.map((name, i) => (
-      <Link key={i} to={`/${name.toLowerCase()}`}>
-        {name}
-      </Link>
-    ))
-  }
+const Navbar: React.FC<Props> = ({ planetData }: Props) => {
   return (
     <Container>
       <Title>The Planets</Title>
-      <Menu>{renderLinks()}</Menu>
+      <MenuItems>{renderLinks(planetData)}</MenuItems>
     </Container>
   )
 }

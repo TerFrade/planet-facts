@@ -1,7 +1,7 @@
 import React from "react"
 
 import { useFindObject } from "../hooks"
-import { Planet as PlanetModel } from "../models"
+import { PlanetModel } from "../models"
 import PageNotFound from "./404"
 
 export type Props = {

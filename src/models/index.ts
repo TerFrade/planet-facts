@@ -1,4 +1,4 @@
-export interface Planet {
+export interface PlanetModel {
   name: string
   overview: {
     content: string
