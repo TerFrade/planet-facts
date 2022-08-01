@@ -142,4 +142,7 @@ export const MenuItems = styled.div`
   @media screen and (max-width: 405px) {
     top: 150px;
   }
+  @media screen and (max-width: 338px) {
+    top: 190px;
+  }
 `
